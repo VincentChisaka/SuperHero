@@ -198,4 +198,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
-Chisaka Vincent  - [marylucyatienoomenda@gmail.com](email)
+Chisaka Vincent  - [Vincentbchisaka@gmail.com](email)
