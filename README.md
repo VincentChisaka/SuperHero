@@ -1,11 +1,11 @@
 
 <br />
 <div align="center">
-  <h3 align="center">Phase-4-Code-Challenge</h3>
+  <h3 align="center">Superheroes</h3>
   <p align="center">
     A 'mini' Rails application.
     <br />
-    <a href="https://github.com/Marylucy123450/Phase-4-Code-Challenge-Superheroes"><strong>Explore the repository »</strong></a>
+    <a href="https://github.com/VincentChisaka/Phase-4-Code-Challenge-Superheroes"><strong>Explore the repository »</strong></a>
     <br />
   </p>
 </div>
@@ -19,7 +19,7 @@ An API for tracking heroes and their superpowers.The Superhero Tracker API is a 
 
 
  ### The project was built with:
- * Ruby v3.1.4
+ * Ruby v3.0.2
  * Ruby on Rails v7.0.4
 
 <!-- GETTING STARTED -->
@@ -27,12 +27,12 @@ An API for tracking heroes and their superpowers.The Superhero Tracker API is a 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Ruby: 2.7.4 
+Ruby: 3.0.2
 Rails: 7.0.4
 
 ## Setup
 ~~~bash
-$ git@github.com:https://github.com/Marylucy123450/Phase-4-Code-Challenge-Superheroes
+$ git@github.com:https://github.com/VincentChisaka/Phase-4-Code-Challenge-Superheroes
 $ cd Phase-4-Code-Challenge-Superheroes
 ~~~
 
@@ -57,7 +57,7 @@ Open `http://localhost:3000/` in your browser.
 Routes
 GET /heroes
 
-  https://superheroes11.onrender.com//heroes
+  https://superheros1.onrender.com//heroes
 
 Returns a list of all heroes.
 
@@ -198,4 +198,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
-Marylucy Atieno  - [marylucyatienoomenda@gmail.com](email)
+Chisaka Vincent  - [marylucyatienoomenda@gmail.com](email)
