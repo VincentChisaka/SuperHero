@@ -7,19 +7,3 @@ telekinesis = Power.create(name: "Telekinesis", description: "The power to move 
 invisibility = Power.create(name: "Invisibility", description: "The ability to become invisible to the naked eye.")
 
 
-# Create some heroes
-hulk = Hero.create(name: "Hulk", super_name: "The Incredible Hulk")
-thor = Hero.create(name: "Thor", super_name: "The God of Thunder")
-iron_man = Hero.create(name: "Iron Man", super_name: "The Armored Avenger")
-captain_america = Hero.create(name: "Captain America", super_name: "The First Avenger")
-black_widow = Hero.create(name: "Black Widow", super_name: "The Russian Spy")
-
-
-
-8.times do
-    HeroPower.create(
-       strength: ['Weak', 'Average','Strong'].sample,
-       hero_id: rand(1..5),
-       power_id: rand(1..5)
-    )
-end
