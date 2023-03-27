@@ -10,17 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_123244) do
-  create_table "hero_powers", force: :cascade do |t|
-    t.string "strength"
-    t.integer "hero_id", null: false
-    t.integer "power_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["hero_id"], name: "index_hero_powers_on_hero_id"
-    t.index ["power_id"], name: "index_hero_powers_on_power_id"
-  end
-
   create_table "heros", force: :cascade do |t|
     t.string "name"
     t.string "super_name"
