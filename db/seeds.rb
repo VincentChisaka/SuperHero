@@ -8,11 +8,11 @@ invisibility = Power.create(name: "Invisibility", description: "The ability to b
 
 
 # Create some heroes
-hulk = Hero.create(name: "Hulk", super_name: "The Incredible Hulk")
-thor = Hero.create(name: "Thor", super_name: "The God of Thunder")
-iron_man = Hero.create(name: "Iron Man", super_name: "The Armored Avenger")
-captain_america = Hero.create(name: "Captain America", super_name: "The First Avenger")
-black_widow = Hero.create(name: "Black Widow", super_name: "The Russian Spy")
+hulk = Hero.create(name: "Thanos", super_name: "The Avengers")
+thor = Hero.create(name: "Flash", super_name: "The Flash")
+iron_man = Hero.create(name: "Bat Man", super_name: "The Bat Man")
+captain_america = Hero.create(name: "Captain Man", super_name: "Henry Danger")
+black_widow = Hero.create(name: "Captain Marvel", super_name: "The Marvel")
 
 
 
