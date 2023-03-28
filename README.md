@@ -1,201 +1,73 @@
+# README
+#### SuperHeroes
+The Heroes API is an application for tracking heroes and their superpowers
 
-<br />
-<div align="center">
-  <h3 align="center">Superheroes</h3>
-  <p align="center">
-    A 'mini' Rails application.
-    <br />
-    <a href="https://github.com/VincentChisaka/Phase-4-Code-Challenge-Superheroes"><strong>Explore the repository »</strong></a>
-    <br />
-  </p>
-</div>
+#### Description
+ It allows you to create, read, update and delete heroes and powers, as well as assign powers to heroes and vice versa.
 
-<!-- ABOUT THE PROJECT -->
+ ##### etting Started
+* To get started with the Heroes API, follow these steps:
 
-## About The Project
+* Clone the repository to your local machine
+    git clone "https://github.com/MUNAH10/Code-Challenge-Superheroes"
 
-An API for tracking heroes and their superpowers.The Superhero Tracker API is a Rails-based API that allows you to track superheroes and their superpowers. It includes three main resources: Hero, Power, and HeroPower. The API provides endpoints for managing these resources, including routes for creating, reading, updating, and deleting data.
+* Install the required gems using
+    * bundle install
 
+* Create the database and run the migrations using 
+    * rails db:migrate
 
+* Seed the database with some initial data using 
+    * rails db:seed
 
- ### The project was built with:
- * Ruby v3.0.2
- * Ruby on Rails v7.0.4
+* Start the server using 
+    * rails server
 
-<!-- GETTING STARTED -->
-## Getting Started
-To get a local copy up and running follow these simple example steps.
+#### Models
+    The Heroes API has the following models:
 
-### Prerequisites
-Ruby: 3.0.2
-Rails: 7.0.4
+## Hero
+    A hero has the following attributes:
 
-## Setup
-~~~bash
-$ git@github.com:https://github.com/VincentChisaka/Phase-4-Code-Challenge-Superheroes
-$ cd Phase-4-Code-Challenge-Superheroes
-~~~
+    * 'name' (string): The name of the hero.
+    * 'description' (text): A description of the hero.
+    * 'created_at' (datetime): The date and time the hero was created.
+    * 'updated_at' (datetime): The date and time the hero was last updated.
 
-Install gems with:
-```
-bundle install
-```
-Setup database with:
-> make sure you have postgresql installed and running on your system
-```
-   rails db:create
-   rails db:migrate
-   rails db:seed
-```
-### Usage
-Start server with:
-```
-    rails server or rails s
-```
-Open `http://localhost:3000/` in your browser.
+    A hero has many powers through hero_powers.
 
-Routes
-GET /heroes
+## Power
+ A power has the following attributes:
 
-  https://superheros1.onrender.com//heroes
+    * 'name' (string): The name of the power.
+    * 'description' (text): A description of the power.
+    *'created_at' (datetime): The date and time the power was created.
+    * 'updated_at' (datetime): The date and time the power was last updated.
 
-Returns a list of all heroes.
+ A power has many heroes through hero_powers.
 
-Response
+## HeroPower
+A hero power has the following attributes:
 
-json
+    * 'strength' (string): The strength of the power assigned to the hero. Valid * values are 'Strong', 'Weak' and 'Average'.
+    * 'created_at' (datetime): The date and time the hero power was created.
+    * 'updated_at' (datetime): The date and time the hero power was last updated.
 
-    [
-        {
-    "id": 1,
-    "name": "Hulk",
-    "super_name": "The Incredible Hulk",
-    "powers": [
-    {
-    "id": 2,
-    "name": "Flight",
-    "description": "The power to propel oneself through the air."
-    }
-    ]
-    },
-    ]
+A hero power belongs to a hero and a power.
 
-GET /heroes/:id
+### Validations
+    The Heroes API has the following validations:
 
-https://superheroes11.onrender.com//heroes/2
+    * HeroPower: strength must be one of the following values: 'Strong', 'Weak', 'Average'.
+    * Power: description must be present and at least 20 characters long.
 
 
-    {
-    "id": 2,
-    "name": "Thor",
-    "super_name": "The God of Thunder",
-    "powers": [
-       {
-      "id": 2,
-      "name": "Flight",
-       "description": "The power to propel oneself through the air."
-      },
-     {
-      "id": 5,
-      "name": "Invisibility",
-     "description": "The ability to become invisible to the naked eye."
-    },
-    {
-     "id": 1,
-      "name": "Super Strength",
-      "description": "The ability to lift and move objects beyond human     capability."
-     },
-     {
-     "id": 3,
-     "name": "Energy Blasts",
-     "description": "The ability to generate and emit powerful energy blasts."
-     }
-     ]
-     }
+#### Author
+This project was contributed by:
 
-Returns a specific hero by id, along with their powers.
+[Muna Hassan]
 
+#### License
+* MIT License
 
-If the hero does not exist:
-
-json
-
-    {
-     "error": "Hero not found"
-    }
-
-GET /powers
-
-https://superheroes11.onrender.com//powers
-
-Returns a list of all powers.
-
-Response
-
-json
-
-    [
-    {
-    "id": 1,
-    "name": "Super Strength",
-    "description": "The ability to lift and move objects beyond human capability."
-    },
-
-    {
-    "id": 2,
-    "name": "Flight",
-    "description": "The power to propel oneself through the air."
-    },
-    ]
-
-
-GET /powers/:id
-
-https://superheroes11.onrender.com//powers/4
-
-Returns a specific power by id.
-
-Response
-
-json
-
-    {
-    "id": 4,
-    "name": "Telekinesis",
-    "description": "The power to move objects with the mind."
-    }
-
-If the power does not exist:
-
-json
-
-    {
-     "error": "Power not found"
-}
-
-PATCH /powers/:id
-
-use postman or Thunder client to test it out
-
-https://superheroes11.onrender.com//powers/4
-
-Updates a specific power by id.
-
-
-
-POST /hero_powers
-
-use postman or Thunder client to test it out
-
-https://superheroes11.onrender.com//hero_powers
-
-Creates a new HeroPower
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<!-- CONTACT -->
-## Contact
-Chisaka Vincent  - [Vincentbchisaka@gmail.com](email)
+Copyright (c) 2023 MUNAH HASSAN

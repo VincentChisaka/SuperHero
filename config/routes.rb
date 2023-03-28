@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # endpoint for heroes
-  get '/heroes', to: 'heroes#index'
-  get '/heroes/:id', to: 'heroes#show'
+  # Defines the root path route ("/")
+  # root "articles#index"
 
-  #endpoints for powers
-  get '/powers', to: 'powers#index'
-  get '/powers/:id', to: 'powers#show'
-  patch '/powers/:id', to: 'powers#update'
-  get '/hero_powers', to: 'hero_powers#index'
-  post '/hero_powers', to: 'hero_powers#create'
+  resources :heroes, only: [:index, :show] 
+  resources :powers, only: [:index, :show, :update] 
+  resources :hero_powers, only: [:index, :create] 
+  
+
 end
